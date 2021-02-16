@@ -7,16 +7,15 @@ public class Cartas {
          
     int[][]nums;
     int numSecuencia;
-    int serieTablero=1;
+    
     
     public void generarTablero() {
         nums = new int [3][3];
-        
+        int serieTablero=1;
         
         for(int y=0; y<3;y++){
-            for(int x=0; x<3;x++){
-                nums[x][y] = serieTablero++;
-                
+            for(int x=0; x<3;x++){               
+                nums[x][y] = serieTablero++;                
             }          
         }
         this.mostrarPorConsola();      
@@ -43,7 +42,8 @@ public class Cartas {
     public int getSecuenciaNumeros(){     
         
         numSecuencia = getNumAleatorio(1,9);
-        System.out.println("numSecuencia="+ numSecuencia);      
+        System.out.print(numSecuencia+" ");      
         return numSecuencia;      
     }
+    
 }

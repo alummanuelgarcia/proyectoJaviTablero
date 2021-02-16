@@ -20,6 +20,11 @@ public class App extends Application {
         
         Cartas cartas = new Cartas();
         cartas.generarTablero();
+        
+        cartas.getSecuenciaNumeros();
+        cartas.getSecuenciaNumeros();
+        cartas.getSecuenciaNumeros();
+        cartas.getSecuenciaNumeros();
         cartas.getSecuenciaNumeros();
     }
 
