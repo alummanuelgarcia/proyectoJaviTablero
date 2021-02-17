@@ -25,7 +25,13 @@ public class App extends Application {
         cartas.getSecuenciaNumeros();
         cartas.getSecuenciaNumeros();
         cartas.getSecuenciaNumeros();
-        cartas.getSecuenciaNumeros();
+        
+        cartas.getSecuenciaCompleta();
+        cartas.getSecuenciaCompleta();
+        cartas.getSecuenciaCompleta();
+
+
+        
     }
 
     public static void main(String[] args) {

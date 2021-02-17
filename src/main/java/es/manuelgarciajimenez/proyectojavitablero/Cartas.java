@@ -6,8 +6,8 @@ import java.util.Random;
 public class Cartas {
          
     int[][]nums;
-    int numSecuencia;
-    
+    int nuevoNumSecuencia;
+    String secuencia;
     
     public void generarTablero() {
         nums = new int [3][3];
@@ -41,9 +41,13 @@ public class Cartas {
     
     public int getSecuenciaNumeros(){     
         
-        numSecuencia = getNumAleatorio(1,9);
-        System.out.print(numSecuencia+" ");      
-        return numSecuencia;      
+        nuevoNumSecuencia = getNumAleatorio(1,9);      
+        return nuevoNumSecuencia;      
     }
     
+    public void getSecuenciaCompleta(){
+        
+        secuencia = nuevoNumSecuencia+"";
+        System.out.println(secuencia);
+    }
 }
