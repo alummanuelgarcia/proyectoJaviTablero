@@ -27,8 +27,6 @@ public class App extends Application {
         colores.getSecuenciaNumeros();
         colores.getSecuenciaNumeros();
         colores.getSecuenciaNumeros();
-
-
         
     }
 
