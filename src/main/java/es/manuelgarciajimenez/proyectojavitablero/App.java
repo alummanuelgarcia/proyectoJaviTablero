@@ -18,17 +18,15 @@ public class App extends Application {
         stage.setScene(scene);
         stage.show();      
         
-        Cartas cartas = new Cartas();
-        cartas.generarTablero();
+        Colores colores = new Colores();
+        colores.generarTablero();
         
-        cartas.getSecuenciaNumeros();
-        cartas.getSecuenciaNumeros();
-        cartas.getSecuenciaNumeros();
-        cartas.getSecuenciaNumeros();
         
-        cartas.getSecuenciaCompleta();
-        cartas.getSecuenciaCompleta();
-        cartas.getSecuenciaCompleta();
+        colores.getSecuenciaNumeros();                             
+        colores.getSecuenciaNumeros();               
+        colores.getSecuenciaNumeros();
+        colores.getSecuenciaNumeros();
+        colores.getSecuenciaNumeros();
 
 
         

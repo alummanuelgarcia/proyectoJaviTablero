@@ -3,11 +3,10 @@ package es.manuelgarciajimenez.proyectojavitablero;
 
 import java.util.Random;
 
-public class Cartas {
+public class Colores {
          
     int[][]nums;
-    int nuevoNumSecuencia;
-    String secuencia;
+    String secuencia="";
     
     public void generarTablero() {
         nums = new int [3][3];
@@ -40,14 +39,16 @@ public class Cartas {
 
     
     public int getSecuenciaNumeros(){     
-        
-        nuevoNumSecuencia = getNumAleatorio(1,9);      
+        int nuevoNumSecuencia;
+                
+        nuevoNumSecuencia = getNumAleatorio(1,9);
+        secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
+        System.out.println(secuencia);       
         return nuevoNumSecuencia;      
     }
     
     public void getSecuenciaCompleta(){
         
-        secuencia = nuevoNumSecuencia+"";
-        System.out.println(secuencia);
+        
     }
 }
