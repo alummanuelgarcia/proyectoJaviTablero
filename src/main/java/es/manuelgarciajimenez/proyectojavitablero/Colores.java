@@ -6,6 +6,10 @@ import java.util.Random;
 public class Colores {
          
     int[][]nums;
+    
+    
+    //secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
+    // y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
     String secuencia="";
     
     public void generarTablero() {
@@ -40,15 +44,11 @@ public class Colores {
     
     public int getSecuenciaNumeros(){     
         int nuevoNumSecuencia;
-                
+               
         nuevoNumSecuencia = getNumAleatorio(1,9);
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
         System.out.println(secuencia);       
         return nuevoNumSecuencia;      
     }
     
-    public void getSecuenciaCompleta(){
-        
-        
-    }
 }
