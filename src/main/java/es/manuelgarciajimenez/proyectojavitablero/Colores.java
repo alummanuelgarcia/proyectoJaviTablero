@@ -9,7 +9,7 @@ public class Colores {
     
     
     //secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
-    // y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
+    //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
     String secuencia="";
     
     public void generarTablero() {
@@ -51,4 +51,14 @@ public class Colores {
         return nuevoNumSecuencia;      
     }
     
+    public int getNumPos (int posx, int posy){
+        try{
+            return nums[posx][posy];
+        } catch (Exception ex){
+            System.out.println("La posicion es incorrecta");
+            //Returnamos -1 porque necesitamos un return
+            //de tipo int.
+            return -1;
+        }
+    }
 }
