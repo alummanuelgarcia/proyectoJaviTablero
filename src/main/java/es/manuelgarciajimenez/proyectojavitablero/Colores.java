@@ -5,8 +5,7 @@ import java.util.Random;
 
 public class Colores {
          
-    int[][]nums;
-    
+    int[][]nums;   
     
     //secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
     //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
@@ -49,19 +48,18 @@ public class Colores {
                
         nuevoNumSecuencia = getNumAleatorio(1,9);
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
-        System.out.println(secuencia);       
+        System.out.println("Secuencia de Partida:" + secuencia);       
         return nuevoNumSecuencia;      
     }
     
     
-    public int getSecuenciaJugador(int numJugador){
+    public void getSecuenciaJugador(int numJugador){
         
         secuenciaJugador = secuenciaJugador + Integer.toString(numJugador);
         System.out.println("Secuencia Jugador:"+secuenciaJugador);
-        return numJugador;
         
-           
     }
+  
     
     public int getNumPos (int posx, int posy){
         try{

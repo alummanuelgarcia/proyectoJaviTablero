@@ -19,23 +19,25 @@ public class App extends Application {
         stage.show();      
         
         Colores colores = new Colores();
+        
+        //Generamos tablero
         colores.generarTablero();
         
-        
+        //Funcionamiento del juego en sí.       
         colores.getSecuenciaNumeros();
         colores.getSecuenciaJugador(6);
         
         colores.getSecuenciaNumeros();
-        colores.getSecuenciaJugador(63);
+        colores.getSecuenciaJugador(3);
         
         colores.getSecuenciaNumeros();
-        colores.getSecuenciaJugador(634);
+        colores.getSecuenciaJugador(4);
         
         colores.getSecuenciaNumeros();
-        colores.getSecuenciaJugador(6347);
+        colores.getSecuenciaJugador(7);
         
         colores.getSecuenciaNumeros();
-        colores.getSecuenciaJugador(632478);
+        colores.getSecuenciaJugador(8);
     }
 
     public static void main(String[] args) {
