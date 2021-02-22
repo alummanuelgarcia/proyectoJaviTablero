@@ -22,12 +22,20 @@ public class App extends Application {
         colores.generarTablero();
         
         
-        colores.getSecuenciaNumeros();                             
-        colores.getSecuenciaNumeros();               
         colores.getSecuenciaNumeros();
-        colores.getSecuenciaNumeros();
-        colores.getSecuenciaNumeros();
+        colores.getSecuenciaJugador(6);
         
+        colores.getSecuenciaNumeros();
+        colores.getSecuenciaJugador(63);
+        
+        colores.getSecuenciaNumeros();
+        colores.getSecuenciaJugador(634);
+        
+        colores.getSecuenciaNumeros();
+        colores.getSecuenciaJugador(6347);
+        
+        colores.getSecuenciaNumeros();
+        colores.getSecuenciaJugador(632478);
     }
 
     public static void main(String[] args) {

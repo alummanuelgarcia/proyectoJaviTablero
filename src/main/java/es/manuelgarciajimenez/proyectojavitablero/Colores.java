@@ -12,6 +12,8 @@ public class Colores {
     //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
     String secuencia="";
     
+    String secuenciaJugador="";
+    
     public void generarTablero() {
         nums = new int [3][3];
         int serieTablero=1;
@@ -49,6 +51,16 @@ public class Colores {
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
         System.out.println(secuencia);       
         return nuevoNumSecuencia;      
+    }
+    
+    
+    public int getSecuenciaJugador(int numJugador){
+        
+        secuenciaJugador = secuenciaJugador + Integer.toString(numJugador);
+        System.out.println("Secuencia Jugador:"+secuenciaJugador);
+        return numJugador;
+        
+           
     }
     
     public int getNumPos (int posx, int posy){
