@@ -71,4 +71,13 @@ public class Colores {
             return -1;
         }
     }
+    
+    
+    public void comparacionSecuencia(){
+        if(secuencia.equals(secuenciaJugador)){
+            System.out.println("Has acertado");                  
+        }else{
+            System.out.println("Has fallado");
+        }
+    }
 }
