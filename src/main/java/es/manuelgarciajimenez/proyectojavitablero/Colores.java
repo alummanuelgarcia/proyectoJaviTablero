@@ -6,6 +6,8 @@ import java.util.Random;
 public class Colores {
          
     int[][]nums;   
+    int numFilas=3;
+    int numColumnas=3;
     
     //secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
     //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
@@ -14,11 +16,11 @@ public class Colores {
     String secuenciaJugador="";
     
     public void generarTablero() {
-        nums = new int [3][3];
+        nums = new int [3][numFilas];
         int serieTablero=1;
         
-        for(int y=0; y<3;y++){
-            for(int x=0; x<3;x++){               
+        for(int y=0; y<numFilas;y++){
+            for(int x=0; x<numColumnas;x++){               
                 nums[x][y] = serieTablero++;                
             }          
         }
@@ -27,8 +29,8 @@ public class Colores {
 
     
     public void mostrarPorConsola(){
-        for(int y=0; y<3;y++){
-            for(int x=0; x<3;x++){
+        for(int y=0; y<numFilas;y++){
+            for(int x=0; x<numColumnas;x++){
                 System.out.print(nums[x][y]+" ");
             }
             System.out.println();
