@@ -9,7 +9,7 @@ public class Colores {
     int numFilas=3;
     int numColumnas=3;
     
-    //secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
+    //Secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
     //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
     String secuencia="";
     

@@ -19,10 +19,11 @@ public class App extends Application {
         stage.show();   
         
         
+        
         Colores colores = new Colores();
         
         colores.generarTablero();
-
+        
         ColoresView coloresView = new ColoresView(colores);
         paneRoot.setCenter(coloresView);
         
