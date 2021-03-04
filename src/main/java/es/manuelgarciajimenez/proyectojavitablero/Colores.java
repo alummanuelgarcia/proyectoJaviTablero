@@ -55,10 +55,10 @@ public class Colores {
     }
     
     
-    public void getSecuenciaJugador(int numJugador){
+    public void getSecuenciaJugador(int numElegido){
         
-        secuenciaJugador = secuenciaJugador + Integer.toString(numJugador);
-        System.out.println("Secuencia Jugador:"+secuenciaJugador);
+        secuenciaJugador = secuenciaJugador + Integer.toString(numElegido);
+        System.out.println("Secuencia Jugador:"+ secuenciaJugador);
         
     }
   
@@ -77,7 +77,9 @@ public class Colores {
     
     public void comparacionSecuencia(){
         if(secuencia.equals(secuenciaJugador)){
-            System.out.println("Has acertado");                  
+            System.out.println("Has acertado");
+            this.getSecuenciaNumeros();
+            
         }else{
             System.out.println("Has fallado");
         }

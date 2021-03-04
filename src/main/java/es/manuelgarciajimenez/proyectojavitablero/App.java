@@ -33,8 +33,8 @@ public class App extends Application {
                    
         //Funcionamiento del juego en sí.       
         colores.getSecuenciaNumeros();
-        colores.getSecuenciaJugador(6);
-        colores.comparacionSecuencia();
+        //colores.getSecuenciaJugador(6);
+        //colores.comparacionSecuencia();
         
         //colores.getSecuenciaNumeros();
         //colores.getSecuenciaJugador(3);

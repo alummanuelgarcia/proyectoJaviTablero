@@ -11,7 +11,8 @@ import javafx.scene.shape.Rectangle;
 public class ColoresView extends GridPane{
     
     Colores colores;
-    
+    final int TAM_X=100;
+    final int TAM_Y=100;
     
     public ColoresView(Colores colores){
         this.colores = colores;
@@ -138,19 +139,23 @@ public class ColoresView extends GridPane{
                 }
             }
         }       
-        this.setMaxHeight(100 * colores.numFilas);
-        this.setMaxWidth(100 * colores.numColumnas);
+        this.setMaxHeight(TAM_Y * colores.numFilas);
+        this.setMaxWidth(TAM_X * colores.numColumnas);
         this.controlRaton();
     }
     
-    private void controlRaton() {
+    public void controlRaton() {
         this.setOnMouseClicked((MouseEvent mouseEvent) -> {
-            System.out.println("X: " + mouseEvent.getX() + ", Y: "+ mouseEvent.getY() );
-            int colClic = (int)(mouseEvent.getX() / 800);
-            int filClic = (int)(mouseEvent.getY() / 600);
-            System.out.println("Col: " + colClic + ", Fil: " + filClic);
-            int num = colores.getNumPos(colClic, filClic);
-            System.out.println("Número: " + num);
+            
+            //System.out.println("X: " + mouseEvent.getX() + ", Y: "+ mouseEvent.getY() );
+            int colClic = (int)(mouseEvent.getX() / TAM_X);
+            int filClic = (int)(mouseEvent.getY() / TAM_Y);
+            //System.out.println("Col: " + colClic + ", Fil: " + filClic);
+            
+            int numElegido = colores.getNumPos(colClic, filClic);
+            colores.getSecuenciaJugador(numElegido);
+            colores.comparacionSecuencia();
+            System.out.println("Número: " + numElegido);
         });
     }
     
