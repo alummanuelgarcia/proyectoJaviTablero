@@ -27,6 +27,9 @@ public class App extends Application {
         ColoresView coloresView = new ColoresView(colores);
         paneRoot.setCenter(coloresView);
         
+        ColorJuego colorjuego = new ColorJuego();
+        paneRoot.setTop(colorjuego);
+        
         
         
         //SIMULACION DEL JUEGO

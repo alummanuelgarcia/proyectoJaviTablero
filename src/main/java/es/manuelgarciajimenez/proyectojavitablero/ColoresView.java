@@ -19,124 +19,48 @@ public class ColoresView extends GridPane{
         this.setStyle("-fx-grid-lines-visible:true");
         for(int y=0; y<colores.numFilas; y++) {
             for(int x=0; x<colores.numColumnas; x++) {
+                
                 int num = colores.getNumPos(x, y);
-                if(num == 1){                   
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);                   
-                    r.setFill(Color.RED);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
+                String strNum = String.valueOf(num);
+                Label label = new Label(strNum);
+                Rectangle r = new Rectangle();
+                r.setWidth(100);
+                r.setHeight(100);
+                label.setPrefWidth(100);
+                label.setPrefHeight(100);
+                label.setAlignment(Pos.CENTER);
+                
+                switch(num){
+                    case 1:                                         
+                        r.setFill(Color.RED);
+                        break;
+                    case 2:
+                        r.setFill(Color.BLUE);
+                        break;
+                    case 3:
+                        r.setFill(Color.GREEN);
+                        break;
+                    case 4:
+                        r.setFill(Color.YELLOW);
+                        break;
+                    case 5:
+                        r.setFill(Color.PINK);
+                        break;
+                    case 6:
+                        r.setFill(Color.MEDIUMORCHID);
+                        break;
+                    case 7:
+                        r.setFill(Color.ORANGE);
+                        break;
+                    case 8:
+                        r.setFill(Color.BROWN);
+                        break;
+                    case 9:
+                        r.setFill(Color.GRAY);
+                        break;
                 }
-                if(num == 2){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.BLUE);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
-                if(num == 3){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.GREEN);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
-                if(num == 4){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.YELLOW);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
-                if(num == 5){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.PINK);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
-                if(num == 6){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.MEDIUMORCHID);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
-                if(num == 7){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.ORANGE);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
-                if(num == 8){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.BROWN);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
-                if(num == 9){
-                    String strNum = String.valueOf(num);
-                    Label label = new Label(strNum);
-                    Rectangle r = new Rectangle();
-                    r.setWidth(100);
-                    r.setHeight(100);
-                    label.setPrefWidth(100);
-                    label.setPrefHeight(100);
-                    label.setAlignment(Pos.CENTER);
-                    r.setFill(Color.GRAY);
-                    this.add(r, x, y);
-                    this.add(label, x, y);
-                }
+                this.add(r, x, y);
+                this.add(label, x, y);
             }
         }       
         this.setMaxHeight(TAM_Y * colores.numFilas);
