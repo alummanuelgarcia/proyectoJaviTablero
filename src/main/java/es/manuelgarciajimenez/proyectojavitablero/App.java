@@ -27,7 +27,7 @@ public class App extends Application {
         ColoresView coloresView = new ColoresView(colores);
         paneRoot.setCenter(coloresView);
         
-        ColorJuego colorjuego = new ColorJuego();
+        ColorJuego colorjuego = new ColorJuego(colores);
         paneRoot.setTop(colorjuego);
         
         
@@ -35,7 +35,7 @@ public class App extends Application {
         //SIMULACION DEL JUEGO
                    
         //Funcionamiento del juego en sí.       
-        colores.getSecuenciaNumeros();
+        //colores.getSecuenciaNumeros();
         //colores.getSecuenciaJugador(6);
         //colores.comparacionSecuencia();
         
