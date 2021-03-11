@@ -13,6 +13,8 @@ public class ColoresView extends GridPane{
     Colores colores;
     final int TAM_X=100;
     final int TAM_Y=100;
+    int contadorClicJugador=0;
+    
     
     public ColoresView(Colores colores){
         this.colores = colores;
@@ -77,9 +79,15 @@ public class ColoresView extends GridPane{
             //System.out.println("Col: " + colClic + ", Fil: " + filClic);
             
             int numElegido = colores.getNumPos(colClic, filClic);
+            contadorClicJugador++;
+            System.out.println("Contador Clic Jugador:"+ contadorClicJugador);
             colores.getSecuenciaJugador(numElegido);
+            this.colores = colores;
+            if(contadorClicJugador == contadorNumPartida ){
+                
+            }
             colores.comparacionSecuencia();
-            System.out.println("Número: " + numElegido);
+            //System.out.println("Número: " + numElegido);
         });
     }
     

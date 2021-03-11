@@ -8,7 +8,7 @@ public class Colores {
     int[][]nums;   
     int numFilas=3;
     int numColumnas=3;
-    
+    int contadorNumPartida=0;
     //Secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
     //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
     String secuencia="";
@@ -49,7 +49,10 @@ public class Colores {
         int nuevoNumSecuencia;
                
         nuevoNumSecuencia = getNumAleatorio(1,9);
+        
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
+        contadorNumPartida++;
+        System.out.println("Contador nº partida:"+ contadorNumPartida);
         System.out.println("Secuencia de Partida:" + secuencia);       
         return nuevoNumSecuencia;      
     }
@@ -58,7 +61,7 @@ public class Colores {
     public void getSecuenciaJugador(int numElegido){
         
         secuenciaJugador = secuenciaJugador + Integer.toString(numElegido);
-        System.out.println("Secuencia Jugador:"+ secuenciaJugador);
+        //System.out.println("Secuencia Jugador:"+ secuenciaJugador);
         
     }
   
