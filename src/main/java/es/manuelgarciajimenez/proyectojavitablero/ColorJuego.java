@@ -17,12 +17,7 @@ public class ColorJuego extends StackPane {
         Rectangle rectangleColor = new Rectangle();
         rectangleColor.setHeight(100);
         rectangleColor.setWidth(100);
-       // rectangleColor.setLayoutX(350);
-        //rectangleColor.setLayoutY(20);
-        
-        //rectangleColor.setFill(Color.RED);
-        
-        
+               
         
         Label labelColor = new Label();
         

@@ -10,6 +10,7 @@ public class Colores {
     int numFilas=3;
     int numColumnas=3;
     int contadorNumPartida=0;
+    int contadorClicJugador=0;
     //Secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
     //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
     String secuencia="";
@@ -45,7 +46,6 @@ public class Colores {
         return num;
     }
 
-    
     public int getSecuenciaNumeros(){     
         int nuevoNumSecuencia;
                
@@ -53,9 +53,9 @@ public class Colores {
         
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
         contadorNumPartida++;
-        //this.ColoresView = ColoresView;
-        //DUDA JAVI
-        ColoresView.contadorClicJugador = 0;
+        //this.ColoresView = coloresView;
+        
+        
         secuenciaJugador= "";
         System.out.println("Contador nº partida:"+ contadorNumPartida);
         System.out.println("Secuencia de Partida:" + secuencia);       
@@ -85,8 +85,10 @@ public class Colores {
     
     public void comparacionSecuencia(){
         if(secuencia.equals(secuenciaJugador)){
-            System.out.println("Has acertado");
+            System.out.println("Has acertado");           
             this.getSecuenciaNumeros();
+            contadorClicJugador = 0 ;
+            
             
         }else{
             System.out.println("Has fallado");
