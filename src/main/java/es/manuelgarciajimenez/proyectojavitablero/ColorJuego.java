@@ -8,6 +8,7 @@ import javafx.scene.shape.Rectangle;
 public class ColorJuego extends StackPane {
     
     Colores colores;
+    ColoresView ColoresView;
     
     public ColorJuego(Colores colores){
         this.colores = colores;

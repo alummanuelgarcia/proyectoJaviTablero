@@ -93,6 +93,7 @@ public class ColoresView extends GridPane{
             
             //System.out.println("Número: " + numElegido);
         });
+        
     }
     
     

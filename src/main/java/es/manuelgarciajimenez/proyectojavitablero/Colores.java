@@ -4,7 +4,8 @@ package es.manuelgarciajimenez.proyectojavitablero;
 import java.util.Random;
 
 public class Colores {
-         
+       
+    ColoresView ColoresView;
     int[][]nums;   
     int numFilas=3;
     int numColumnas=3;
@@ -52,6 +53,10 @@ public class Colores {
         
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
         contadorNumPartida++;
+        //this.ColoresView = ColoresView;
+        //DUDA JAVI
+        ColoresView.contadorClicJugador = 0;
+        secuenciaJugador= "";
         System.out.println("Contador nº partida:"+ contadorNumPartida);
         System.out.println("Secuencia de Partida:" + secuencia);       
         return nuevoNumSecuencia;      
