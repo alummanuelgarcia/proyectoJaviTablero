@@ -9,25 +9,32 @@ import javafx.stage.Stage;
 /**
  * JavaFX App
  */
-public class App extends Application {
-
+public class App extends Application {  
+    
+    BorderPane paneRoot = new BorderPane();
+    
     @Override
+    
     public void start(Stage stage) {        
-        BorderPane paneRoot = new BorderPane();
+        
         var scene = new Scene (paneRoot,800,600);
         stage.setScene(scene);
         stage.show();   
+                
         
+        Colores colores = new Colores(paneRoot);
         
-        
-        Colores colores = new Colores();
-        
+        //Genero el tablero de la partida
         colores.generarTablero();
+        
+        //Genero el primer numero de la secuencia de la partida
+        colores.getSecuenciaNumeros();
+        
         
         ColoresView coloresView = new ColoresView(colores);
         paneRoot.setCenter(coloresView);
         
-        ColorJuego colorjuego = new ColorJuego(colores);
+        ColorJuego colorjuego = new ColorJuego(colores.nuevoNumSecuencia);
         paneRoot.setTop(colorjuego);
         
         

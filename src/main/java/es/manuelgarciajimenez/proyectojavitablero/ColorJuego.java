@@ -8,22 +8,22 @@ import javafx.scene.shape.Rectangle;
 public class ColorJuego extends StackPane {
     
     Colores colores;
-    ColoresView ColoresView;
+    ColoresView coloresView;
     
-    public ColorJuego(Colores colores){
-        this.colores = colores;
+    
+    // Metodo para ver el color que ha tocado 
+    
+    public ColorJuego(int nuevoNumSecuencia){
+        
         
         // Rectangulo que muestra el color
         Rectangle rectangleColor = new Rectangle();
         rectangleColor.setHeight(100);
         rectangleColor.setWidth(100);
-               
-        
+                      
         Label labelColor = new Label();
         
-        // Generacion del número de la partida en el Rectangulo Principal
-        int nuevoNumSecuencia = colores.getSecuenciaNumeros();
-        
+               
         // Color de la ficha aleatoria
         switch(nuevoNumSecuencia){
             case 1:

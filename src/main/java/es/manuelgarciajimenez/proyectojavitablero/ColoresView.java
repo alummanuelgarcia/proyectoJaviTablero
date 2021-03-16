@@ -15,6 +15,7 @@ public class ColoresView extends GridPane{
     final int TAM_Y=100;
     
     
+    //Metodo para ver el tablero del juego con sus colores.
     
     public ColoresView(Colores colores){
         this.colores = colores;

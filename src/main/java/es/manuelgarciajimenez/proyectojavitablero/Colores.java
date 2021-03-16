@@ -11,11 +11,18 @@ public class Colores {
     int numColumnas=3;
     int contadorNumPartida=0;
     int contadorClicJugador=0;
+    ColorJuego colorjuego;
     //Secuencia se guarda aquí porque la secuencia tiene que estar vacia al principio de todo
     //y se va a ir rellenando conforme llamemos al método getSecuenciaNumeros.
     String secuencia="";
     
     String secuenciaJugador="";
+    int nuevoNumSecuencia;
+    
+    public Colores(paneRoot){
+        
+    }
+    
     
     public void generarTablero() {
         nums = new int [3][numFilas];
@@ -46,20 +53,18 @@ public class Colores {
         return num;
     }
 
-    public int getSecuenciaNumeros(){     
-        int nuevoNumSecuencia;
+    public void getSecuenciaNumeros(){     
+        
                
         nuevoNumSecuencia = getNumAleatorio(1,9);
-        
+            
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
         contadorNumPartida++;
-        //this.ColoresView = coloresView;
-        
-        
+                      
         secuenciaJugador= "";
         System.out.println("Contador nº partida:"+ contadorNumPartida);
         System.out.println("Secuencia de Partida:" + secuencia);       
-        return nuevoNumSecuencia;      
+              
     }
     
     
@@ -87,6 +92,8 @@ public class Colores {
         if(secuencia.equals(secuenciaJugador)){
             System.out.println("Has acertado");           
             this.getSecuenciaNumeros();
+            ColorJuego colorJuego = new ColorJuego(nuevoNumSecuencia);
+            paneRoot.setTop(colorjuego);
             contadorClicJugador = 0 ;
             
             
