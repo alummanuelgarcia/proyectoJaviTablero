@@ -2,6 +2,7 @@
 package es.manuelgarciajimenez.proyectojavitablero;
 
 import java.util.Random;
+import javafx.scene.layout.BorderPane;
 
 public class Colores {
        
@@ -18,9 +19,10 @@ public class Colores {
     
     String secuenciaJugador="";
     int nuevoNumSecuencia;
+    BorderPane paneroot;
     
-    public Colores(paneRoot){
-        
+    public Colores(BorderPane paneRoot){
+        this.paneroot = paneRoot;
     }
     
     
@@ -92,8 +94,8 @@ public class Colores {
         if(secuencia.equals(secuenciaJugador)){
             System.out.println("Has acertado");           
             this.getSecuenciaNumeros();
-            ColorJuego colorJuego = new ColorJuego(nuevoNumSecuencia);
-            paneRoot.setTop(colorjuego);
+            ColorJuego nuevoColorJuego = new ColorJuego(nuevoNumSecuencia);
+            this.paneroot.setTop(nuevoColorJuego);
             contadorClicJugador = 0 ;
             
             

@@ -27,8 +27,11 @@ public class App extends Application {
         //Genero el tablero de la partida
         colores.generarTablero();
         
+
         //Genero el primer numero de la secuencia de la partida
         colores.getSecuenciaNumeros();
+        
+        
         
         
         ColoresView coloresView = new ColoresView(colores);
@@ -36,6 +39,9 @@ public class App extends Application {
         
         ColorJuego colorjuego = new ColorJuego(colores.nuevoNumSecuencia);
         paneRoot.setTop(colorjuego);
+        
+        Puntuacion puntuacion = new Puntuacion(paneRoot);
+        paneRoot.setTop(puntuacion);
         
         
         
