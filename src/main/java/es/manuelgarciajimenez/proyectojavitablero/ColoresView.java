@@ -20,8 +20,7 @@ public class ColoresView extends GridPane{
     *Metodo para ver el tablero del juego con sus colores.Cada numero del array
     *tiene su color.
     */
-    
-    
+      
     public ColoresView(Colores colores, Puntuacion objPuntuacion){
         this.colores = colores;
         this.objPuntuacion = objPuntuacion;
@@ -76,6 +75,8 @@ public class ColoresView extends GridPane{
         this.setMaxWidth(TAM_X * colores.numColumnas);
         this.controlRaton();
     }
+    
+    //Metodo para cliclear en el tablero el color elegido
     
     public void controlRaton() {
         this.setOnMouseClicked((MouseEvent mouseEvent) -> {

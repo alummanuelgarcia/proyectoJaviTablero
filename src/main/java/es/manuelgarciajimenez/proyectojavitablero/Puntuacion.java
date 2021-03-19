@@ -15,6 +15,8 @@ public class Puntuacion extends VBox {
         Text textoPuntuacionActual = new Text ("0");
         Text textoPuntuacionMaxima = new Text ("0");
         
+        
+        //Metodo en el que creamos la puntuacion actual de partida y la puntuacion maxima
         public Puntuacion(BorderPane paneRoot,Colores colores){
             
             this.paneroot = paneRoot;

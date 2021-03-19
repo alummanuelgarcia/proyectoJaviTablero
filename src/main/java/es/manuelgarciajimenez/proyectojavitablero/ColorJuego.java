@@ -11,7 +11,7 @@ public class ColorJuego extends StackPane {
     ColoresView coloresView;
     
     
-    // Metodo para ver el color que ha tocado 
+    // Metodo para ver el color que ha tocado en la secuencia de partida
     
     public ColorJuego(int nuevoNumSecuencia){
         
