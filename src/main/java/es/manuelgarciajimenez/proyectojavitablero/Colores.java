@@ -2,7 +2,12 @@
 package es.manuelgarciajimenez.proyectojavitablero;
 
 import java.util.Random;
+import javafx.geometry.Pos;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 public class Colores {
        
@@ -21,6 +26,7 @@ public class Colores {
     int nuevoNumSecuencia;
     BorderPane paneroot;
     int puntuacion=0;
+    int puntuacionMaxima=0;
     
     
     
@@ -97,6 +103,27 @@ public class Colores {
     public void comparacionSecuencia(){
         if(secuencia.equals(secuenciaJugador)){
             puntuacion++;
+            
+            //MENSAJE ACERTADO
+            HBox paneAcertado = new HBox();
+            paneAcertado.setAlignment(Pos.TOP_CENTER);
+            paneAcertado.setMinHeight(70);
+           
+            paneAcertado.setSpacing(20);
+            paneroot.setBottom(paneAcertado);
+            
+            
+            
+            Text textoPuntuacion = new Text ("Has acertado! Sigue así!");
+            textoPuntuacion.setLayoutX(30);
+            
+            textoPuntuacion.setFont(Font.font(25));
+            textoPuntuacion.setFill(Color.GREEN);
+
+            paneAcertado.getChildren().add(textoPuntuacion);
+
+            //paneroot.getChildren().add(paneAcertado);
+            
             System.out.println("Has acertado");
             System.out.println("Puntuacion: "+ puntuacion);
             //this.objPuntuacion= Puntuacion;
@@ -109,6 +136,24 @@ public class Colores {
             
         }else{
             System.out.println("Has fallado");
+            //MENSAJE FALLADO
+            //MENSAJE ACERTADO
+            HBox paneFallado = new HBox();
+            paneFallado.setAlignment(Pos.TOP_CENTER);
+            paneFallado.setMinHeight(70);
+           
+            paneFallado.setSpacing(20);
+            paneroot.setBottom(paneFallado);
+            
+            
+            
+            Text textoPuntuacion = new Text ("Has fallado! Inténtalo de nuevo!");
+            textoPuntuacion.setLayoutX(30);
+            
+            textoPuntuacion.setFont(Font.font(25));
+            textoPuntuacion.setFill(Color.GREEN);
+
+            paneFallado.getChildren().add(textoPuntuacion);
         }
     }
 }

@@ -13,6 +13,7 @@ public class Puntuacion extends VBox {
         Colores colores;
         BorderPane paneroot;
         Text textoPuntuacionActual = new Text ("0");
+        Text textoPuntuacionMaxima = new Text ("0");
         
         public Puntuacion(BorderPane paneRoot,Colores colores){
             
@@ -52,12 +53,46 @@ public class Puntuacion extends VBox {
             
             panePuntuacion.getChildren().add(textoPuntuacionActual);
             
+             //Puntuacion Maxima
+             //PUNTUACION MAXIMA
+            HBox paneMaxima = new HBox();        
+            paneMaxima.setTranslateY(12);
+            paneMaxima.setTranslateX(500);
+            paneMaxima.setSpacing(10);
+            paneroot.getChildren().add(paneMaxima);
+
+            Text textoMaxima = new Text ("Puntuación Máxima:");
+            textoMaxima.setLayoutX(10);
+            textoMaxima.setFont(Font.font(25));
+            textoMaxima.setFill(Color.GREEN);
+
+            paneMaxima.getChildren().add(textoMaxima);
+
+            HBox panePuntuacionMaxima = new HBox();        
+            panePuntuacionMaxima.setTranslateY(50);
+            panePuntuacionMaxima.setTranslateX(50);
+            panePuntuacionMaxima.setSpacing(0);
+            paneroot.getChildren().add(panePuntuacionMaxima);
+
+            
+            textoPuntuacionMaxima.setLayoutX(10);
+            textoPuntuacionMaxima.setFont(Font.font(30));
+            textoPuntuacionMaxima.setFill(Color.GREEN);
+
+            paneMaxima.getChildren().add(textoPuntuacionMaxima);
+            
              
         }
       
         public void ActualizarPuntuacion(){
             
             textoPuntuacionActual.setText(String.valueOf(colores.puntuacion));
+            
+            if (colores.puntuacion > colores.puntuacionMaxima){
+                    colores.puntuacionMaxima = colores.puntuacion;
+                    
+            }
+            textoPuntuacionMaxima.setText(String.valueOf(colores.puntuacionMaxima));
         }
         
 }
