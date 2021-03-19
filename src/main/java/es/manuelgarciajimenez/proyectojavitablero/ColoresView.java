@@ -16,7 +16,11 @@ public class ColoresView extends GridPane{
     Puntuacion objPuntuacion;
     
     
-    //Metodo para ver el tablero del juego con sus colores.
+    /*
+    *Metodo para ver el tablero del juego con sus colores.Cada numero del array
+    *tiene su color.
+    */
+    
     
     public ColoresView(Colores colores, Puntuacion objPuntuacion){
         this.colores = colores;

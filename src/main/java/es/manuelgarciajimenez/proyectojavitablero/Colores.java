@@ -11,6 +11,7 @@ import javafx.scene.text.Text;
 
 public class Colores {  
     ColoresView ColoresView;
+    //Creo array para mostrar el tabero que es 3X3
     int[][]nums;   
     int numFilas=3;
     int numColumnas=3;
@@ -34,7 +35,7 @@ public class Colores {
         
     }
     
-    
+    //Metodo por el que creo que el tablero por arrays
     public void generarTablero() {
         nums = new int [3][numFilas];
         int serieTablero=1;
@@ -47,7 +48,7 @@ public class Colores {
         this.mostrarPorConsola();      
     }
 
-    
+    //Metodo para mostrar visualmente en consola la forma del array
     public void mostrarPorConsola(){
         for(int y=0; y<numFilas;y++){
             for(int x=0; x<numColumnas;x++){
@@ -57,16 +58,19 @@ public class Colores {
         }
     }
     
-    
+    //Metodo en el que obtenemos un numero aleatorio
     public int getNumAleatorio(int min, int max){
         Random random = new Random();        
         int num = random.nextInt(max-min+1)+ min;
         return num;
     }
 
+    /**
+    *Metodo en el que generamos el numero aleatorio de la partida y guardamos la
+    *secuencia de partida
+    */
     public void getSecuenciaNumeros(){     
-        
-               
+                      
         nuevoNumSecuencia = getNumAleatorio(1,9);
             
         secuencia =  secuencia + Integer.toString(nuevoNumSecuencia);
@@ -78,7 +82,7 @@ public class Colores {
               
     }
     
-    
+    //Metodo en el que guardamos la secuencia que ha elegido el jugador 
     public void getSecuenciaJugador(int numElegido){
         
         secuenciaJugador = secuenciaJugador + Integer.toString(numElegido);
@@ -86,7 +90,7 @@ public class Colores {
         
     }
   
-    
+    //Metodo para obtener cualquier numero del array creado
     public int getNumPos (int posx, int posy){
         try{
             return nums[posx][posy];
@@ -98,7 +102,11 @@ public class Colores {
         }
     }
     
-    
+    /**
+     * Metodo por el cual comparamos la secuencia del jugador y la de 
+     * partida, si es igual,mensaje de que hemos acertado y nos genera un nuevo numero,
+     * si fallamos nos muestra que hemos fallado y tenemos que reiniciar   
+     */
     public void comparacionSecuencia(){
         if(secuencia.equals(secuenciaJugador)){
             puntuacion++;
@@ -109,9 +117,7 @@ public class Colores {
             paneAcertado.setMinHeight(70);
            
             paneAcertado.setSpacing(20);
-            paneroot.setBottom(paneAcertado);
-            
-            
+            paneroot.setBottom(paneAcertado);                      
             
             Text textoPuntuacion = new Text ("Has acertado! Sigue así!");
             textoPuntuacion.setLayoutX(30);
@@ -120,19 +126,15 @@ public class Colores {
             textoPuntuacion.setFill(Color.GREEN);
 
             paneAcertado.getChildren().add(textoPuntuacion);
-
-            //paneroot.getChildren().add(paneAcertado);
-            
+          
             System.out.println("Has acertado");
             System.out.println("Puntuacion: "+ puntuacion);
-            //this.objPuntuacion= Puntuacion;
-            
+                       
             this.getSecuenciaNumeros();
             ColorJuego nuevoColorJuego = new ColorJuego(nuevoNumSecuencia);
             this.paneroot.setTop(nuevoColorJuego);
             contadorClicJugador = 0 ;
-            
-            
+                       
         }else{
             System.out.println("Has fallado");
             //MENSAJE FALLADO
@@ -145,7 +147,7 @@ public class Colores {
             
             
             
-            Text textoPuntuacion = new Text ("Has fallado! Inténtalo de nuevo!");
+            Text textoPuntuacion = new Text ("Has fallado! ESC para reiniciar!");
             textoPuntuacion.setLayoutX(30);
             
             textoPuntuacion.setFont(Font.font(25));
