@@ -9,8 +9,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 
-public class Colores {
-       
+public class Colores {  
     ColoresView ColoresView;
     int[][]nums;   
     int numFilas=3;
@@ -137,7 +136,6 @@ public class Colores {
         }else{
             System.out.println("Has fallado");
             //MENSAJE FALLADO
-            //MENSAJE ACERTADO
             HBox paneFallado = new HBox();
             paneFallado.setAlignment(Pos.TOP_CENTER);
             paneFallado.setMinHeight(70);
@@ -156,4 +154,6 @@ public class Colores {
             paneFallado.getChildren().add(textoPuntuacion);
         }
     }
+    
+    
 }
