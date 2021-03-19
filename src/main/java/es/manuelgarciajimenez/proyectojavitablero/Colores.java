@@ -20,9 +20,13 @@ public class Colores {
     String secuenciaJugador="";
     int nuevoNumSecuencia;
     BorderPane paneroot;
+    int puntuacion=0;
+    
+    
     
     public Colores(BorderPane paneRoot){
         this.paneroot = paneRoot;
+        
     }
     
     
@@ -92,7 +96,11 @@ public class Colores {
     
     public void comparacionSecuencia(){
         if(secuencia.equals(secuenciaJugador)){
-            System.out.println("Has acertado");           
+            puntuacion++;
+            System.out.println("Has acertado");
+            System.out.println("Puntuacion: "+ puntuacion);
+            //this.objPuntuacion= Puntuacion;
+            
             this.getSecuenciaNumeros();
             ColorJuego nuevoColorJuego = new ColorJuego(nuevoNumSecuencia);
             this.paneroot.setTop(nuevoColorJuego);

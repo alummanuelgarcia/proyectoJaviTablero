@@ -3,6 +3,7 @@ package es.manuelgarciajimenez.proyectojavitablero;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
@@ -13,12 +14,14 @@ public class ColoresView extends GridPane{
     Colores colores;
     final int TAM_X=100;
     final int TAM_Y=100;
+    Puntuacion objPuntuacion;
     
     
     //Metodo para ver el tablero del juego con sus colores.
     
-    public ColoresView(Colores colores){
+    public ColoresView(Colores colores, Puntuacion objPuntuacion){
         this.colores = colores;
+        this.objPuntuacion = objPuntuacion;
         this.setStyle("-fx-grid-lines-visible:true");
         for(int y=0; y<colores.numFilas; y++) {
             for(int x=0; x<colores.numColumnas; x++) {
@@ -88,6 +91,7 @@ public class ColoresView extends GridPane{
             if(colores.contadorClicJugador == colores.contadorNumPartida ){
                 
                 colores.comparacionSecuencia();
+                this.objPuntuacion.ActualizarPuntuacion();
                 //colores.getSecuenciaNumeros();
                 
             }

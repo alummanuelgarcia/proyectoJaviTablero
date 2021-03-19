@@ -19,10 +19,15 @@ public class App extends Application {
         
         var scene = new Scene (paneRoot,800,600);
         stage.setScene(scene);
+        stage.setTitle("SimonDice");
         stage.show();   
                 
         
         Colores colores = new Colores(paneRoot);
+        Puntuacion puntuacion = new Puntuacion(paneRoot,colores);
+        puntuacion.ActualizarPuntuacion();
+        
+        
         
         //Genero el tablero de la partida
         colores.generarTablero();
@@ -30,18 +35,19 @@ public class App extends Application {
 
         //Genero el primer numero de la secuencia de la partida
         colores.getSecuenciaNumeros();
+              
         
-        
-        
-        
-        ColoresView coloresView = new ColoresView(colores);
+        ColoresView coloresView = new ColoresView(colores,puntuacion);
         paneRoot.setCenter(coloresView);
         
         ColorJuego colorjuego = new ColorJuego(colores.nuevoNumSecuencia);
+        //System.out.println("NuevoNumSecuencia"+colores.nuevoNumSecuencia);
         paneRoot.setTop(colorjuego);
         
-        Puntuacion puntuacion = new Puntuacion(paneRoot);
-        paneRoot.setTop(puntuacion);
+        
+        
+        
+        //paneRoot.setTop(puntuacion);
         
         
         
