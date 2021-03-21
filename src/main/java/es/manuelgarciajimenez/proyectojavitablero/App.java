@@ -84,7 +84,8 @@ public class App extends Application {
                                     paneRoot.setTop(colorJuegoReinicio);
                                     ColoresView coloresViewReinicio = new ColoresView(colores,puntuacion);                                  
                                     paneRoot.setCenter(coloresViewReinicio);
-                                    break;
+                                    
+                                                                   
                             }
         });
         

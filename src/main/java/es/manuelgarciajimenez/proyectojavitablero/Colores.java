@@ -137,6 +137,7 @@ public class Colores {
                        
         }else{
             System.out.println("Has fallado");
+            contadorClicJugador = 0 ;
             //MENSAJE FALLADO
             HBox paneFallado = new HBox();
             paneFallado.setAlignment(Pos.TOP_CENTER);
